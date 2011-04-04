@@ -50,10 +50,12 @@ table#items
   thead
     tr th
       padding: 10px 10px 10px 0
-      text-align: right
       color: dark
     tr.actions
-      a
+      th
+        text-align: right
+      a#prev
+      a#next
         padding: 3px 6px
         border: 1px solid light
         box-shadow: 0 1px 1px 1px light + 15
@@ -64,10 +66,10 @@ table#items
         &:active
         &.active
           box-shadow: 0 1px 2px 0 blue
-        &:first-child
-          border-radius: 3px 0 0 3px
-        &:last-child
-          border-radius: 0 3px 3px 0
+      a#prev
+        border-radius: 3px 0 0 3px
+      a#next
+        border-radius: 0 3px 3px 0
   tbody
     tr
       border-bottom: 1px solid #eee
@@ -76,7 +78,6 @@ table#items
       td
         border-right: 1px solid #eee
         padding 4px 15px
-        text-align: right
         &:first-child
         &:nth-child(2)
           width: 50px
