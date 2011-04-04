@@ -2,7 +2,7 @@
     "name": "cluster-log"
   , "version": "0.0.1"
   , "description": "Cluster logging plugin"
-  , "keywords": ["cluster", "redis", "log", "logger"]
+  , "keywords": ["cluster", "redis", "log", "logger", "express"]
   , "author": "TJ Holowaychuk <tj@learnboost.com>"
   , "dependencies": {
       "redis": "0.5.x"
