@@ -7,6 +7,7 @@
   , "dependencies": {
       "redis": "0.5.x"
     , "express": "2.x"
+    , "jade": "0.10.x"
   }
   , "main": "index"
   , "engines": { "node": "0.4.x" }

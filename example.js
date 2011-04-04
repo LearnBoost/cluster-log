@@ -12,8 +12,12 @@ var server = http.createServer(function(req, res){
   res.end('Hello World');
 });
 
-cluster(server)
+cluster = cluster(server)
+  .use(cluster.debug())
   .use(log())
   .listen(3000);
 
-console.log('cluster listening on port 3000');
+if (cluster.isMaster) {
+  console.log('  cluster listening on port 3000');
+  console.log('  log listening on port 9999');
+}
