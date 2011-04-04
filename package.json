@@ -1,0 +1,10 @@
+{
+    "name": "cluster-log"
+  , "version": "0.0.1"
+  , "description": "Cluster logging plugin"
+  , "keywords": []
+  , "author": "TJ Holowaychuk <tj@learnboost.com>"
+  , "dependencies": {}
+  , "main": "index"
+  , "engines": { "node": "0.4.x" }
+}
