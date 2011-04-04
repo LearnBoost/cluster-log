@@ -4,6 +4,10 @@
   Remote logging plugin for [Cluster](http://learnboost.github.com/cluster),
   backed by Redis.
 
+## Screenshot
+
+![Logger Screenshot](http://cl.ly/5k18)
+
 ## License 
 
 (The MIT License)
