@@ -49,7 +49,6 @@ a
 
 table#items
   width: 100%
-  margin-top: 50px
   border-collapse: collapse
   thead
     tr th
@@ -84,10 +83,10 @@ table#items
       td
         border-right: 1px solid #eee
         padding 4px 15px
-        &:first-child
+        &:nth-child(1)
         &:nth-child(2)
           width: 50px
-        &:last-child
+        &:nth-child(3)
           border-right: none
     tr.exception
       td:nth-child(2)
