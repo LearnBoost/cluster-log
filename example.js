@@ -14,7 +14,7 @@ var server = http.createServer(function(req, res){
 
 cluster = cluster(server)
   .use(cluster.debug())
-  .use(log({ max: 100 }))
+  .use(log({ max: 100, user: 'tj', pass: 'foobar' }))
   .listen(3000);
 
 if (cluster.isMaster) {

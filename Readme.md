@@ -24,6 +24,8 @@
 
   - `max`  maximum number of entries [2000]
   - `title`  page title ["Cluster Logs"]
+  - `user`  basic-auth username
+  - `pass`  basic-auth password
 
 ## Example
 
