@@ -1,7 +1,8 @@
 
 # cluster-log
 
-  Cluster logging plugin
+  Remote logging plugin for [Cluster](http://learnboost.github.com/cluster),
+  backed by Redis.
 
 ## License 
 
