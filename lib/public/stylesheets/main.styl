@@ -1,0 +1,43 @@
+
+@import 'vendor'
+@import 'positions'
+
+// colors
+
+blue = #19B2E0
+mid = #a7a7a7
+light = #e5e5e5
+dark = #626262
+
+// mixins
+
+border()
+  border 1px solid light
+
+smooth()
+  -webkit-font-smoothing antialiased
+
+// styles
+
+html
+  border-top 5px solid light
+
+body
+  position relative
+  margin 0
+  padding 50px
+  font 12px/1.4 'Helvetica Neue', Helvetica, Arial Geneva, sans-serif
+  border-top 1px solid darken(light, 10%)
+  color mid
+
+h1, h2, h3
+  smooth()
+  margin 10px 0
+  color darken(dark, 30%)
+
+h2
+  padding-bottom 10px
+  border-bottom 1px solid light
+
+a
+  text-decoration none
