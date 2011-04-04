@@ -82,10 +82,18 @@ table#items
       td
         font-family: arial;
         border-right: 1px solid #eee
-        padding 4px 15px
+        padding: 4px 15px
         &:first-child
           text-align: center
           width: 80px
+        &:nth-child(2)
+          pre
+            height: 20px
+            overflow: hidden
+          &:hover
+            pre
+              height: auto
+              overflow: visible
         &:last-child
           text-align: center
           border-right: none
