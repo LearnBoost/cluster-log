@@ -2,7 +2,44 @@
 # cluster-log
 
   Remote logging plugin for [Cluster](http://learnboost.github.com/cluster),
-  backed by Redis.
+  backed by Redis and Express.
+
+## Installation
+
+    $ npm install cluster-log
+
+## Usage
+
+ Launch redis:
+ 
+     $ redis-server
+
+ Simply require the plugin, and invoke it with the options mentioned below
+ if desired, followed by an optional `port` / `host`, defaulting to port `9999`.
+
+    cluster(server)
+      .use(require('cluster-log')({ max: 100 }, '/var/run/logs'))
+
+## Options
+
+  - `max`  maximum number of entries [2000]
+  - `title`  page title ["Cluster Logs"]
+
+## Example
+
+    var cluster = require('cluster')
+      , remoteLogger = require('cluster-log')
+      , http = require('http');
+
+    var server = http.createServer(function(req, res){
+      if (Math.random() > 0.9) throw new Error('omgz!'); 
+      res.end('Hello World');
+    });
+
+    cluster = cluster(server)
+      .use(cluster.debug())
+      .use(remoteLogger())
+      .listen(3000);
 
 ## Screenshot
 
