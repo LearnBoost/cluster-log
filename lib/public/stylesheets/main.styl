@@ -56,11 +56,13 @@ table#items
         padding: 3px 6px
         border: 1px solid light
         box-shadow: 0 1px 1px 1px light + 15
+        transition: box-shadow 0.2s
         &:hover
           color: dark + 50%
           box-shadow: 0 0 5px 1px rgba(blue, 0.5), 0 1px 1px 1px blue
         &:active
-          box-shadow: 0 0 2px 1px rgba(blue, 0.8), 0 1px 0 0 blue
+        &.active
+          box-shadow: 0 1px 2px 0 blue
         &:first-child
           border-radius: 3px 0 0 3px
         &:last-child
