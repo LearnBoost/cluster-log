@@ -7,15 +7,12 @@
 blue = #19B2E0
 mid = #a7a7a7
 light = #e5e5e5
-dark = #626262
+dark = #4B4B4B
 
 // mixins
 
 border()
-  border 1px solid light
-
-smooth()
-  -webkit-font-smoothing antialiased
+  border: 1px solid light
 
 // styles
 
@@ -23,21 +20,68 @@ html
   border-top 5px solid light
 
 body
-  position relative
-  margin 0
-  padding 50px
-  font 12px/1.4 'Helvetica Neue', Helvetica, Arial Geneva, sans-serif
-  border-top 1px solid darken(light, 10%)
-  color mid
+  position: relative
+  margin: 0
+  padding: 50px
+  font: 12px/1.4 'Helvetica Neue', Helvetica, Arial Geneva, sans-serif
+  border-top: 1px solid darken(light, 10%)
+  color: mid
 
 h1, h2, h3
-  smooth()
-  margin 10px 0
-  color darken(dark, 30%)
+  font-smoothing: antialiased
+  margin: 10px 0
+  color: dark
 
 h2
-  padding-bottom 10px
-  border-bottom 1px solid light
+  padding-bottom: 10px
+  border-bottom: 1px solid light
 
 a
-  text-decoration none
+  text-decoration: none
+
+// items table
+
+table#items
+  width: 100%
+  margin-top: 50px
+  border-collapse: collapse
+  thead
+    tr th
+      padding: 10px 10px 10px 0
+      text-align: right
+      color: dark
+  tbody
+    tr
+      border-bottom: 1px solid #eee
+      &:last-child
+        border-bottom: none
+      td
+        border-right: 1px solid #eee
+        padding 4px 15px
+        text-align: right
+        &:last-child
+          border-right: none
+        &.entity
+          text-align: left
+          input
+            width: 90px
+        &.amount
+          color: light
+          width: 80px
+          input
+            width: 60px
+            text-align: right
+        &.category
+        &.date
+        &.tags
+          width: 100px
+          input
+            width: 80px
+        &.delete
+          width: 70px
+          a
+            button()
+    tr.edit-item td
+      text-align: right
+      input[type='text']
+        width: 80%
