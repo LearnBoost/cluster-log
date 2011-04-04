@@ -6,7 +6,7 @@
 
 ## Screenshot
 
-![Logger Screenshot](http://cl.ly/5k18)
+![Logger Screenshot](http://cl.ly/5k18/Screenshot.png)
 
 ## License 
 
