@@ -26,6 +26,7 @@
   - `title`  page title ["Cluster Logs"]
   - `user`  basic-auth username
   - `pass`  basic-auth password
+  - `tls`  TLS options
 
 ## Example
 
