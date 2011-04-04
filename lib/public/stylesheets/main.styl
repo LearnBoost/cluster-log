@@ -86,6 +86,13 @@ table#items
         &:first-child
           text-align: center
           width: 80px
+        &:last-child
+          text-align: center
+          border-right: none
+    tr.exception
+      td
+        &:first-child
+          color: red
         &:nth-child(2)
           pre
             height: 20px
@@ -94,9 +101,3 @@ table#items
             pre
               height: auto
               overflow: visible
-        &:last-child
-          text-align: center
-          border-right: none
-    tr.exception
-      td:first-child
-        color: red
