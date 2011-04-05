@@ -18,7 +18,7 @@
  if desired, followed by an optional `port` / `host`, defaulting to port `9999`.
 
     cluster(server)
-      .use(require('cluster-log')({ max: 100 }, '/var/run/logs'))
+      .use(require('cluster-log')({ max: 100 }, 8888))
 
 ## Options
 
