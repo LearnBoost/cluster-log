@@ -1,6 +1,6 @@
 {
     "name": "cluster-log"
-  , "version": "0.1.0"
+  , "version": "0.1.1"
   , "description": "Cluster logging plugin"
   , "keywords": ["cluster", "redis", "log", "logger", "express"]
   , "author": "TJ Holowaychuk <tj@learnboost.com>"
