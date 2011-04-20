@@ -44,6 +44,23 @@
       .use(remoteLogger())
       .listen(3000);
 
+## Custom Events
+
+  The `cluster` variable below is what is returned from `cluster(server)`, which is an __instanceof__ `cluster.Master`. Passing this variable around within modules, or choosing to have a global is up to you.
+
+  To notify cluster-log of custom events, we can simply invoke `master.log(type, data)` within a worker. For example say we want
+  to log when a user authenticates:
+  
+      cluster.log('login', user.name);
+
+  By default cluster-log can only report on uncaughtExceptions, meaning only exceptions that bring down a worker. This is usually a rare case, so this same technique can be applied within an error handler for say connect or express:
+  
+      app.error(function(err, req, res, next){
+        cluster.log(err);
+        console.error(err.stack || err.message);
+        res.send(500);
+      });
+
 ## Screenshot
 
 ![Logger Screenshot](http://f.cl.ly/items/3G0q032n0a2Z1i2r0K12/Screenshot.png)
