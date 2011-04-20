@@ -7,8 +7,19 @@ var cluster = require('cluster')
   , log = require('./')
   , http = require('http');
 
+var msgs = ['oh noes', 'boom', 'broken stuff'];
+
 var server = http.createServer(function(req, res){
-  if (Math.random() > 0.9) throw new Error('omgz!'); 
+  // cluster will report uncaught exceptions
+  if (Math.random() > 0.9) throw new Error(msgs[Math.random() * msgs.length | 0]);
+  // we can also log arbitrary data
+  if (req.url == '/login') cluster.log('login', 'tj logged in');
+  // in many cases we would normally next(err)
+  // so perhaps within an error handler we would
+  // notify cluster of an exception, even if it 
+  // did not crash the worker as an uncaughtException,
+  // but is still useful for us.
+  if (req.url == '/error') cluster.log(new Error('some error occurred'));
   res.end('Hello World');
 });
 
